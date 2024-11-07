@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Images Showcase</title>
+</head>
+<body>
+    <header>
+        <h1>Responsive Image Techniques</h1>
+        <p>Learn how to make images adapt to different screen sizes and resolutions.</p>
+    </header>
+
+    <section class="image-examples">
+        <!-- Responsive Image with Percentage-Based Width -->
+        <div class="example">
+            <h2>Percentage-Based Width</h2>
+            <img src="images/image1.jpg" alt="Example Image" class="responsive-percentage">
+            <p>This image adjusts its width based on the container’s width, maintaining its aspect ratio.</p>
+        </div>
+
+        <!-- Responsive Image using CSS Object Fit -->
+        <div class="example">
+            <h2>Object Fit Cover</h2>
+            <div class="object-fit-cover">
+                <img src="images/image2.jpg" alt="Cover Example">
+            </div>
+            <p>The image uses <code>object-fit: cover</code> to fill the container while preserving its aspect ratio.</p>
+        </div>
+
+        <!-- Responsive Images with Media Queries -->
+        <div class="example">
+            <h2>Image Adjusted by Media Queries</h2>
+            <img src="images/image3.jpg" alt="Media Query Example" class="media-query-image">
+            <p>The image style changes based on screen size using media queries.</p>
+        </div>
+
+        <!-- Responsive Images with srcset for Different Resolutions -->
+        <div class="example">
+            <h2>Responsive Images with srcset</h2>
+            <!-- <img src="images/image4-small.jpg" 
+                 srcset="images/image4-small.jpg 500w, images/image4-medium.jpg 1000w, images/image4-large.jpg 1500w"
+                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                 alt="Responsive srcset Example"> -->
+            <p>This image uses <code>srcset</code> to load different resolutions based on screen width.</p>
+        </div>
+    </section>
+</body>
+</html>

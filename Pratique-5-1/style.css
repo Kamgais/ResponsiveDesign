@@ -1,0 +1,97 @@
+/* Basic Page Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.image-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Section Styles */
+.example {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.example h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Technique 1: Percentage-Based Width */
+.responsive-percentage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Technique 2: Object Fit Cover */
+.object-fit-cover {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.object-fit-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Technique 3: Responsive with Media Queries */
+.media-query-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .media-query-image {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .media-query-image {
+        width: 50%;
+    }
+}
+
+
+

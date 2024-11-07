@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, ::after , ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*
+Texte responsive 👍🎉🎉🎉🎉🎉
+*/
+.hero h1 {
+    font-size: 5vw; /* La taille du texte s'adapte automatiquement */
+    text-align: center;
+    padding: 2rem;
+    color: #2c3e50;
+}
+
+
+.about-section {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    border: 2px solid gray;
+    width: 100%;
+}
+
+
+
+.text-content {
+    width: 60%;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+.image-content {
+    width: 40%;
+}
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+    .text-content, .image-content {
+        width: 100%; /* Les deux prennent toute la largeur */
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    padding: 10px 20px;
+    border: 2px solid #2c3e50;
+    margin-top: 40px;
+    
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+
+.articles {
+    display: flex;
+    margin-top: 50px;
+    gap: 30px;
+
+}
+
+.article-card {
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    height: 200px;
+    gap: 1rem;
+}
+.article-card img {
+    width: 40%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .articles {
+        flex-direction: column;
+    }
+    .article-card {
+        flex-direction: column;
+    }
+    .article-card img {
+        width: 100%;
+    }
+}
+
+.portfolio {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.portfolio .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    height: 200px;
+    background-color: #636e72;
+    color: white;
+    font-size: 20px;
+}
+
+/*
+Avec Media query👍🎉🎉🎉🎉🎉
+*/
+@media (max-width: 768px) {
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+}
+
+.testimonials{
+    margin-top: 50px;
+    padding-bottom: 2.2em; 
+    text-align: center;
+    color: #666;
+}
+.testimonials h1{
+    color: #222;
+    font-size: 1.3em;
+}
+.testimonials .test-body{padding: 1em;}
+.testimonials .item{ 
+    text-align: center;
+    padding: 1em 0;
+}
+.testimonials img{
+    width: 4.8em;
+    height: 4.8em;
+    border-radius: 50%;
+}
+.testimonials .name{color: blue;}
+.testimonials .desig{
+    font-size: 0.7em;
+    padding: 0.5em 0;
+    color: #777;
+}
+.testimonials .share{
+    margin: 0 auto;
+    width: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.testimonials i{
+    color: #bfbfbf;
+    padding: 0.5em 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.testimonials i:hover{color: blue;}
+.testimonials p{
+    max-width: 27em;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+.testimonials button{
+    font-size: 1em;
+    background-color: blue;
+    color: white;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.testimonials button:hover{
+    background-color: #444;
+}
+
+@media (min-width: 38.4rem){
+    .testimonials{
+        font-size: 1.2em;
+    }
+    .testimonials .test-body{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .testimonials p{
+        text-align: left;
+        padding: 1em;
+    }
+}
